@@ -1,0 +1,388 @@
+/* ========================================
+   SISTEMA DE GESTIÓN DE CONVOCATORIAS
+   Estilos Personalizados para Bootstrap 5.3
+   ======================================== */
+
+/* ========================================
+   1. VARIABLES CSS (Custom Properties)
+   ======================================== */
+:root {
+  /* Colores Institucionales */
+  --color-primary: #1a365d;
+  --color-primary-light: #2b4c7e;
+  --color-primary-dark: #0f2440;
+  --color-secondary: #d4a847;
+  --color-secondary-light: #e5c067;
+
+  /* Tipografía */
+  --font-heading: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* ========================================
+   2. BASE Y TIPOGRAFÍA
+   ======================================== */
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: var(--font-heading);
+}
+
+/* ========================================
+   3. NAVBAR PERSONALIZADO
+   ======================================== */
+.bg-primary-custom {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark) 100%
+  ) !important;
+}
+
+.escudo-badge {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary) 0%,
+    var(--color-secondary-light) 100%
+  );
+  color: var(--color-primary-dark);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.nav-tab-custom {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.nav-tab-custom:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+.nav-tab-custom.active {
+  background: var(--color-secondary) !important;
+  border-color: var(--color-secondary) !important;
+  color: var(--color-primary-dark) !important;
+}
+
+/* ========================================
+   4. COLORES DE TEXTO PERSONALIZADOS
+   ======================================== */
+.text-primary-custom {
+  color: var(--color-primary) !important;
+}
+
+/* ========================================
+   5. BOTONES PERSONALIZADOS
+   ======================================== */
+.btn-primary-custom {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-light) 0%,
+    var(--color-primary) 100%
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+  color: white;
+}
+
+/* ========================================
+   6. TABLAS PERSONALIZADAS
+   ======================================== */
+.table-primary-custom {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  ) !important;
+  color: white !important;
+}
+
+.table-primary-custom th {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border: none !important;
+}
+
+/* ========================================
+   7. CARDS DE PUNTAJE
+   ======================================== */
+.puntaje-card {
+  transition: all 0.3s ease;
+}
+
+.puntaje-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.puntaje-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================
+   8. TOP 3 RANKING
+   ======================================== */
+.top3-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.top3-item:hover {
+  transform: translateX(5px);
+}
+
+.top3-item.gold {
+  background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+  border: 2px solid #f59e0b;
+}
+
+.top3-item.silver {
+  background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+  border: 2px solid #9ca3af;
+}
+
+.top3-item.bronze {
+  background: linear-gradient(135deg, #fed7aa 0%, #fb923c 100%);
+  border: 2px solid #ea580c;
+}
+
+.top3-medal {
+  font-size: 2rem;
+}
+
+.top3-info {
+  flex: 1;
+}
+
+.top3-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.top3-plaza {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.top3-score {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* ========================================
+   9. PLAZAS VACANTES
+   ======================================== */
+.plaza-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid var(--color-secondary);
+  margin-bottom: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.plaza-item:hover {
+  background: #e9ecef;
+  transform: translateX(5px);
+}
+
+.plaza-code {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+
+.plaza-name {
+  font-weight: 600;
+  color: #495057;
+  flex: 1;
+  margin: 0 1rem;
+}
+
+/* ========================================
+   10. CONSOLA DE SALIDA
+   ======================================== */
+.console-output {
+  background: #1a202c;
+  color: #10b981;
+  font-family: "Courier New", monospace;
+  font-size: 0.875rem;
+  min-height: 150px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.console-line {
+  padding-left: 0.5rem;
+  border-left: 2px solid #10b981;
+  margin-bottom: 0.25rem;
+}
+
+.console-line.error {
+  color: #ef4444;
+  border-left-color: #ef4444;
+}
+
+.console-line.warning {
+  color: #fbbf24;
+  border-left-color: #fbbf24;
+}
+
+.console-line.info {
+  color: #3b82f6;
+  border-left-color: #3b82f6;
+}
+
+/* ========================================
+   11. FOOTER PERSONALIZADO
+   ======================================== */
+.bg-primary-dark {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-dark) 0%,
+    var(--color-primary) 100%
+  ) !important;
+}
+
+/* ========================================
+   12. VALIDACIÓN DE FORMULARIOS
+   ======================================== */
+.form-control.is-valid,
+.form-control.valid {
+  border-color: #198754 !important;
+  background-color: rgba(25, 135, 84, 0.05);
+}
+
+.form-control.is-invalid,
+.form-control.invalid {
+  border-color: #dc3545 !important;
+  background-color: rgba(220, 53, 69, 0.05);
+}
+
+.form-text.text-success {
+  color: #198754 !important;
+}
+
+.form-text.text-danger {
+  color: #dc3545 !important;
+}
+
+/* ========================================
+   13. UTILIDADES ADICIONALES
+   ======================================== */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* Estado badges personalizados */
+.badge.aprobado {
+  background-color: #198754 !important;
+}
+
+.badge.desaprobado {
+  background-color: #dc3545 !important;
+}
+
+/* ========================================
+   14. ANIMACIONES
+   ======================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-pane.active {
+  animation: fadeIn 0.4s ease;
+}
+
+/* ========================================
+   15. RESPONSIVE ADJUSTMENTS
+   ======================================== */
+@media (max-width: 768px) {
+  .escudo-badge {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-brand h1 {
+    font-size: 1rem !important;
+  }
+
+  .navbar-brand small {
+    font-size: 0.7rem !important;
+  }
+
+  .puntaje-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .top3-item {
+    flex-wrap: wrap;
+  }
+
+  .top3-score {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+}
