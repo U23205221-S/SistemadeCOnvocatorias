@@ -32,7 +32,7 @@
     />
 
     <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <!-- ========================================
@@ -53,7 +53,7 @@
             <i class="bi bi-building fs-4"></i>
           </div>
           <div>
-            <h1 class="h5 mb-0 fw-bold">Municipalidad Provincial</h1>
+            <h1 class="h5 mb-0 fw-bold">Municipalidad de Maynas</h1>
             <small class="text-white-50"
               >Sistema de Gestión de Convocatorias</small
             >
@@ -391,6 +391,44 @@
       </div>
     </main>
 
+    <!-- Modal de Confirmación de Eliminación -->
+    <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="modalEliminarLabel">
+              <i class="bi bi-exclamation-triangle me-2"></i>Confirmar Eliminación
+            </h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p class="mb-0">¿Está seguro que desea eliminar al postulante:</p>
+            <p class="fw-bold text-danger fs-5 mb-0" id="nombrePostulanteEliminar"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              <i class="bi bi-x-circle me-1"></i>Cancelar
+            </button>
+            <button type="button" class="btn btn-danger" id="btnConfirmarEliminar">
+              <i class="bi bi-trash me-1"></i>Eliminar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast de Notificación -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="toastNotificacion" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header" id="toastHeader">
+          <i class="bi bi-info-circle me-2" id="toastIcon"></i>
+          <strong class="me-auto" id="toastTitulo">Notificación</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+        <div class="toast-body" id="toastMensaje"></div>
+      </div>
+    </div>
+
     <!-- ========================================
          FOOTER INSTITUCIONAL
     ======================================== -->
@@ -398,7 +436,7 @@
       <div class="container-fluid px-4">
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <h6 class="fw-bold mb-1">Municipalidad Provincial</h6>
+            <h6 class="fw-bold mb-1">Municipalidad de Maynas</h6>
             <p class="small mb-0 opacity-75">
               Sistema de Gestión de Convocatorias y Contratación
             </p>
@@ -431,6 +469,6 @@
     ></script>
 
     <!-- JavaScript Personalizado -->
-    <script src="app.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
