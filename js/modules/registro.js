@@ -193,7 +193,7 @@ function registrarPostulante(event) {
   if (!validarDNI(dni)) {
     notificar(
       "mensajeConfirmacion",
-      "❌ El DNI ingresado no es válido.",
+      "El DNI ingresado no es válido.",
       "error",
     );
     return;
@@ -201,7 +201,7 @@ function registrarPostulante(event) {
   if (!nombres || !apellidoPaterno || !apellidoMaterno) {
     notificar(
       "mensajeConfirmacion",
-      "❌ Debe buscar los datos del DNI antes de registrar.",
+      "Debe buscar los datos del DNI antes de registrar.",
       "error",
     );
     return;
@@ -209,7 +209,7 @@ function registrarPostulante(event) {
   if (!validarEmail(email)) {
     notificar(
       "mensajeConfirmacion",
-      "❌ El email ingresado no es válido.",
+      "El email ingresado no es válido.",
       "error",
     );
     return;
@@ -217,7 +217,7 @@ function registrarPostulante(event) {
   if (!cvFile) {
     notificar(
       "mensajeConfirmacion",
-      "❌ Debe adjuntar su Curriculum Vitae (PDF).",
+      "Debe adjuntar su Curriculum Vitae (PDF).",
       "error",
     );
     return;
@@ -225,7 +225,7 @@ function registrarPostulante(event) {
   if (cvFile.type !== "application/pdf") {
     notificar(
       "mensajeConfirmacion",
-      "❌ El CV debe ser un archivo PDF.",
+      "El CV debe ser un archivo PDF.",
       "error",
     );
     return;
@@ -233,7 +233,7 @@ function registrarPostulante(event) {
   if (cvFile.size > MAX_CV_SIZE) {
     notificar(
       "mensajeConfirmacion",
-      "❌ El CV excede el tamaño máximo de 5MB.",
+      "El CV excede el tamaño máximo de 5MB.",
       "error",
     );
     return;
@@ -241,7 +241,7 @@ function registrarPostulante(event) {
   if (DataStore.getPostulante(dni)) {
     notificar(
       "mensajeConfirmacion",
-      `❌ El DNI ${dni} ya está registrado.`,
+      `El DNI ${dni} ya está registrado.`,
       "error",
     );
     return;
@@ -289,7 +289,7 @@ function registrarPostulante(event) {
     } else {
       notificar(
         "mensajeConfirmacion",
-        "❌ Error al registrar postulante.",
+        "Error al registrar postulante.",
         "error",
       );
     }
@@ -297,7 +297,7 @@ function registrarPostulante(event) {
   reader.onerror = function () {
     notificar(
       "mensajeConfirmacion",
-      "❌ Error al procesar el archivo CV.",
+      "Error al procesar el archivo CV.",
       "error",
     );
   };
